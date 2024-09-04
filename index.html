@@ -19,28 +19,9 @@
               },
           });
       });
-
-      function setEmail() {
-          const email = prompt("Please enter your email", "example@domain.com");
-          if(email !== null) {
-              OneSignal.push(function() {
-                  OneSignal.setEmail(email).then(function(emailId) {
-                      // Callback called when email have finished sending
-                      console.log("emailId: ", emailId);
-                      /*Creating a user_name identifier tag to be used in the email
-                        Example: OneSignal.sendTag("user_name", "devpato");
-                      */
-                      OneSignal.sendTag("user_name", "a_user_name");
-                  });
-              });
-
-          }
-      }
-
-
     </script>
   </head>
   <body>
-    <button onclick="setEmail()">Set Email</button>
+    Hello
   </body>
 </html>
